@@ -7,6 +7,9 @@
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden;
+}
 /*NavBar*/
 
 .nav{
@@ -231,6 +234,11 @@ span{
         grid-template-rows: repeat(3, 1fr);
     }
 }
+@media (max-width: 600px) {
+    .CardProjects {
+        width: 90%;
+    }
+}
 /*Contacto*/
 .main-contacto{
     display: flex;
@@ -248,7 +256,6 @@ span{
     justify-content: center;
     background-color: #511df0;
     height: 500px;
-    width: 400px;
     box-shadow: 0px 0px 98px -19px rgba(0,0,0,0.75);
     gap: 1rem;
 }
@@ -257,19 +264,20 @@ span{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     gap: 1rem;
 }
 .form > div > input{
     padding: 1rem .5rem;
     border-radius: 1rem;
     width: 40%;
+    max-width: 100%;
     border: none;
     outline: none;
     transition: all .5s cubic-bezier(.68,-0.55,.27,1.55);
 }
 .form > div > input:hover{
-    letter-spacing: .5rem;
+    letter-spacing: .2rem;
 }
 .form > div > input:focus{
     border: none;
@@ -285,10 +293,11 @@ span{
     padding: 1rem;
     border: none;
     outline: none;
-    transition: all .5s cubic-bezier(.68,-0.55,.27,1.55);
+    transition: background-color .5s cubic-bezier(.68,-0.55,.27,1.55);
+    transition: box-shadow .5s cubic-bezier(.68,-0.55,.27,1.55);
 }
 .form > textarea:hover{
-    letter-spacing: .2rem;
+    background-color: rgb(245, 243, 226);
 }
 .form > textarea:focus{
     border: none;
@@ -297,12 +306,18 @@ span{
 }
 
 @media (max-width: 1028px){
+    .form{
+        width: 95%;
+    }
+    .form > textarea{
+        width: 80%;
+    }
     .form > textarea:hover{
+        width: 80%;
         letter-spacing: normal;
     }
     .form > textarea:focus{
         box-shadow: none;
-        background-color: rgb(245, 243, 226);
     }
     .form > div > input:hover{
         letter-spacing: normal;
@@ -311,4 +326,21 @@ span{
         box-shadow: none;
         background-color: rgb(245, 243, 226);
     }
+}
+.Boton-Blanco{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2800a1;
+    background-color: white;
+    border: none;
+    border-radius: 15rem;
+    width: 13rem;
+    height: 4rem;
+    margin: 0 0 3rem 0;
+    transition: all .5s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.Boton-Blanco:hover{
+    width: 15rem;
+    letter-spacing: .5rem;
 }
