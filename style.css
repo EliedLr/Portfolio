@@ -305,7 +305,7 @@ span{
     outline: none;
 }
 
-@media (max-width: 1028px){
+@media (max-width: 1000px){
     .form{
         width: 95%;
     }
